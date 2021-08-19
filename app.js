@@ -11,6 +11,29 @@ function updateQuantity(product, price, isadding) {
     // update total 
     const totalField = document.getElementById(product + '-total');
     totalField.innerText = quantity * price;
+
+    calculateTotal()
+}
+
+function getQuantity(product) {
+    const quantityInput = document.getElementById(product + '-number');
+    const quantity = parseInt(quantityInput.value);
+    return quantity;
+    // console.log(quantity)
+}
+
+// calculate subtotal
+function calculateTotal() {
+    const phoneTotal = getQuantity('phone') * 1219;
+    const caseTotal = getQuantity('case') * 59
+    const subTotal = phoneTotal + caseTotal;
+    const tax = subTotal / 10;
+    const total = subTotal + tax;
+
+    // update total on html
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = tax;
+    document.getElementById('total-price').innerText = total;
 }
 
 // quantiy increase and decrease events

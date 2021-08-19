@@ -79,62 +79,9 @@
          </div>
       </div>
    </section>
+
+   <!-- javascript -->
    <script src="app.js"></script>
-
-   <!-- <script>
-      function updateQuantiy(product, price, isAdd) {
-         const quantityInput = document.getElementById(product + '-number');
-         // const quantityText = quantityInput.value;
-         let quantity = parseInt(quantityInput.value);
-         if (isAdd == true) {
-            quantity = quantity + 1;
-         }
-         else if (quantity > 0) {
-            quantity = quantity - 1;
-         }
-         quantityInput.value = quantity;
-
-         // update total
-         const totalField = document.getElementById(product + '-total');
-         totalField.innerText = quantity * price;
-
-         totalCalculate()
-
-      }
-
-      // get product number
-      function getProductNumber(product) {
-         const productNumberInput = document.getElementById(product + '-number')
-         const productNumber = parseInt(productNumberInput.value);
-         return productNumber;
-
-      }
-      // calculate subtotal
-      function totalCalculate() {
-         const phoneTotal = getProductNumber('phone') * 1219;
-         const caseTotal = getProductNumber('case') * 59;
-         const subTotal = phoneTotal + caseTotal;
-         const tax = subTotal / 10;
-         const totalPrice = subTotal + tax;
-         // update subtotal on html
-         document.getElementById('sub-total').innerText = subTotal;
-         document.getElementById('tax-amount').innerText = tax;
-         document.getElementById('total-price').innerText = totalPrice;
-      }
-      // increase and decrease quantity
-      document.getElementById('case-plus').addEventListener('click', function () {
-         updateQuantiy('case', 59, true);
-      })
-      document.getElementById('case-minus').addEventListener('click', function () {
-         updateQuantiy('case', 59, false);
-      })
-      document.getElementById('phone-plus').addEventListener('click', function () {
-         updateQuantiy('phone', 1219, true)
-      })
-      document.getElementById('phone-minus').addEventListener('click', function () {
-         updateQuantiy('phone', 1219, false);
-      })
-   </script> -->
 </body>
 
 </html>
