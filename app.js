@@ -19,7 +19,6 @@ function getQuantity(product) {
     const quantityInput = document.getElementById(product + '-number');
     const quantity = parseInt(quantityInput.value);
     return quantity;
-    // console.log(quantity)
 }
 
 // calculate subtotal
